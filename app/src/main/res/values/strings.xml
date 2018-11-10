@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">WordPress Client</string>
+    <string name="title_activity_blogs_list">BlogsList</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Вася Иванов</string>
+    <string name="nav_header_subtitle">heyfromsteph@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_nav_blogs">Блоги</string>
+    <string name="text_nav_category">Категории</string>
+    <string name="text_nav_tags">Метки</string>
+    <string name="text_nav_favotite">Избранное</string>
+    <string name="text_nav_marks">Закладки</string>
+    <string name="text_nav_exit">Выход</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_tittle_blogs">Мои блоги</string>
+    <string name="text_tittle_markers">Метки</string>
+    <string name="text_tittle_category">Категории</string>
 </resources>

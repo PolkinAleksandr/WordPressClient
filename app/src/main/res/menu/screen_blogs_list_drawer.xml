@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/nav_blogs"
+        android:title="@string/text_nav_blogs"
+        android:icon="@drawable/ic_public_black_24dp"/>
+
+    <item android:id="@+id/nav_category"
+        android:title="@string/text_nav_category"
+        android:icon="@drawable/ic_group_4"/>
+
+    <item android:id="@+id/nav_tags"
+        android:title="@string/text_nav_tags"
+        android:icon="@drawable/ic_local_offer_black_24dp"/>
+
+    <item android:id="@+id/nav_favorite"
+        android:title="@string/text_nav_favotite"
+        android:icon="@drawable/ic_favorite_black_24dp"/>
+
+    <item android:id="@+id/nav_markers"
+        android:title="@string/text_nav_marks"
+        android:icon="@drawable/ic_baseline_bookmarks_24px"/>
+
+    <item android:id="@+id/nav_exit"
+        android:title="@string/text_nav_exit"
+        android:icon="@drawable/ic_input_black_24dp"/>
+
+
+</menu>

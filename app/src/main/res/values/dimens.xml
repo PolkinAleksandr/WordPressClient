@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">178dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="recycler_blogs_width">340dp</dimen>
+    <dimen name="recycler_blogs_height">80dp</dimen>
+    <dimen name="recycler_blogs_image">36dp</dimen>
+    <dimen name="recycler_marker_height">43dp</dimen>
+    <dimen name="recycler_tags_constraint_start">12dp</dimen>
+    <dimen name="recycler_blogs_constraint_start">21dp</dimen>
+    <dimen name="elevation_cardview">5dp</dimen>
+    <dimen name="guideline_begin_blogs">80dp</dimen>
+    <dimen name="guideline_end_blogs">16dp</dimen>
+    <dimen name="margin_top_card_blogs">8dp</dimen>
+    <dimen name="margin_bottom_card_blogs">8dp</dimen>
+    <dimen name="margin_end_card_blogs">10dp</dimen>
+    <dimen name="margin_start_card_blogs">10dp</dimen>
+    <dimen name="padding_top_recycler_blogs">13dp</dimen>
+    <dimen name="margin_bottom_card_tags">3dp</dimen>
+</resources>
