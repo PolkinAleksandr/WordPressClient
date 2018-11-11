@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import aleksandrpolkin.ru.wordpressclient.Class.NameBlogs;
+import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
+import aleksandrpolkin.ru.wordpressclient.R;
 
 public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapterNameBlogs.ViewHolder> {
 
@@ -36,15 +40,16 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
         return nameBlogs.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
         private TextView time;
         private TextView align;
         private ImageView avatar;
         private ImageView postImage;
+        private OnMyClick onMyClick;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.text_name);
             time = itemView.findViewById(R.id.text_date);
@@ -54,12 +59,19 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
 
         }
 
-        void setDataset(final NameBlogs nameBlogs){
+        void setDataset(final NameBlogs nameBlogs) {
             name.setText(nameBlogs.getName());
             time.setText(nameBlogs.getDate());
             align.setText(nameBlogs.getAlign());
             avatar.setImageDrawable(nameBlogs.getAvatar());
             postImage.setImageDrawable(nameBlogs.getPost());
+            onMyClick = (OnMyClick) itemView.getContext();
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onMyClick.setOnMyClick();
+                }
+            });
         }
     }
 }

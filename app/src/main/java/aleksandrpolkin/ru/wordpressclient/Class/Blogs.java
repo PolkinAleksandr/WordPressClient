@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Class;
 
 import android.graphics.drawable.Drawable;
 
@@ -31,7 +31,7 @@ public class Blogs {
         this.myBlogsWord = myBlogsWord;
     }
 
-    public void setBlogs(String someId, String myBlogsWord, Drawable drawable){
+    public void setBlogs(String someId, String myBlogsWord, Drawable drawable) {
         this.drawable = drawable;
         this.someId = someId;
         this.myBlogsWord = myBlogsWord;

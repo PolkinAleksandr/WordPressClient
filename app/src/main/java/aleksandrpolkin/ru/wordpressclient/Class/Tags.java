@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Class;
 
 import android.graphics.drawable.Drawable;
 
@@ -22,7 +22,7 @@ public class Tags {
         this.drawable = drawable;
     }
 
-    public void setTags(String someId, Drawable drawable){
+    public void setTags(String someId, Drawable drawable) {
         this.someId = someId;
         this.drawable = drawable;
     }

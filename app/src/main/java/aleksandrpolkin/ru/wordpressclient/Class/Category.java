@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Class;
 
 public class Category {
     private String name;
@@ -20,7 +20,7 @@ public class Category {
         this.description = description;
     }
 
-    public void setCategory(String name, String descroption){
+    public void setCategory(String name, String descroption) {
         this.name = name;
         this.description = descroption;
     }

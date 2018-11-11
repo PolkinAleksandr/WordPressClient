@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,7 +10,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTags.ViewHolder>{
+import aleksandrpolkin.ru.wordpressclient.Class.Tags;
+import aleksandrpolkin.ru.wordpressclient.R;
+
+public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTags.ViewHolder> {
 
     private List<Tags> tagsList;
 
@@ -36,19 +39,19 @@ public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTag
         return tagsList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView someId;
         private ImageView imageView;
 
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             someId = itemView.findViewById(R.id.recycler_tags_text);
             imageView = itemView.findViewById(R.id.image_post);
         }
 
-        void setDataset(final Tags tags){
+        void setDataset(final Tags tags) {
             someId.setText(tags.getSomeId());
             imageView.setImageDrawable(tags.getDrawable());
         }

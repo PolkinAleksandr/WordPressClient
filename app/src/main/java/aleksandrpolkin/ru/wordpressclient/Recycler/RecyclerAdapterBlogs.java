@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,7 +10,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.ViewHolder>{
+import aleksandrpolkin.ru.wordpressclient.Class.Blogs;
+import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
+import aleksandrpolkin.ru.wordpressclient.R;
+
+public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.ViewHolder> {
 
     private List<Blogs> blogsList;
 
@@ -23,7 +27,7 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
     public RecyclerAdapterBlogs.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_blogs, parent, false);
-                return new ViewHolder(v);
+        return new ViewHolder(v);
     }
 
     @Override
@@ -36,28 +40,28 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
         return blogsList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView someId;
         private TextView myBlogsWord;
         private ImageView imageView;
-        private OnMyBlogsClick onMyBlogsClick;
+        private OnMyClick onMyClick;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             someId = itemView.findViewById(R.id.some_id);
             myBlogsWord = itemView.findViewById(R.id.myblog_word);
             imageView = itemView.findViewById(R.id.imageView_recycler_blogs);
         }
 
-        void setDataset(final Blogs blogs){
+        void setDataset(final Blogs blogs) {
             someId.setText(blogs.getSomeId());
             myBlogsWord.setText(blogs.getMyBlogsWord());
-            onMyBlogsClick = (OnMyBlogsClick) imageView.getContext();
+            onMyClick = (OnMyClick) itemView.getContext();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onMyBlogsClick.setOnMyClick();
+                    onMyClick.setOnMyClick();
                 }
             });
         }

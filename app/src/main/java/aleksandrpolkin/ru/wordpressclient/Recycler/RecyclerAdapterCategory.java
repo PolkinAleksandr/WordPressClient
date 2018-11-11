@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import aleksandrpolkin.ru.wordpressclient.Class.Category;
+import aleksandrpolkin.ru.wordpressclient.R;
 
 public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapterCategory.ViewHolder> {
 
@@ -35,18 +38,18 @@ public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapte
         return categoryList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
         private TextView description;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.recycler_category_name);
             description = itemView.findViewById(R.id.recycler_category_description);
         }
 
-        void setDataset(final Category category){
+        void setDataset(final Category category) {
             name.setText(category.getName());
             description.setText(category.getDescription());
         }

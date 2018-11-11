@@ -1,6 +1,7 @@
 package aleksandrpolkin.ru.wordpressclient;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,12 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OnMyBlogsClick {
+        implements NavigationView.OnNavigationItemSelectedListener, OnMyClick {
 
     private BlogsFragment blogsFragment;
-    private TagsFragment tagsFragment;
-    private CategoryFragment categoryFragment;
     private FragmentTransaction fragmentTransaction;
     private Toolbar toolbar;
 
@@ -78,10 +79,9 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -93,21 +93,21 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
         } else if (id == R.id.nav_tags) {
             toolbar.setTitle(getResources().getString(R.string.text_tittle_markers));
-            tagsFragment = TagsFragment.createInstance();
+            TagsFragment tagsFragment = TagsFragment.createInstance();
             fragmentTransaction = getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, tagsFragment, TagsFragment.FRAGMENT_TAG);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_category) {
             toolbar.setTitle(getResources().getString(R.string.text_tittle_category));
-            categoryFragment = CategoryFragment.createInstance();
+            CategoryFragment categoryFragment = CategoryFragment.createInstance();
             fragmentTransaction = getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, categoryFragment, CategoryFragment.FRAGMENT_TAG);
             fragmentTransaction.commit();
-        }/* else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_markers) {
+            startActivity(ProfileActivity.createNewIntent(this));
+        } else if (id == R.id.nav_favorite) {
+            startActivity(AuthorizationActivity.createNewIntent(this));
+        }/* else if (id == R.id.nav_send) {
 
         }*/
 

@@ -15,6 +15,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import aleksandrpolkin.ru.wordpressclient.Class.Tags;
+import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterTags;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,9 +27,8 @@ public class TagsFragment extends Fragment {
 
     static final String FRAGMENT_TAG = "screen_fragment_tags";
     private List<Tags> tagsList;
-    private Tags tags;
 
-    public static TagsFragment createInstance(){
+    public static TagsFragment createInstance() {
         return new TagsFragment();
     }
 
@@ -36,7 +38,7 @@ public class TagsFragment extends Fragment {
         View v = inflater.inflate(R.layout.screen_fragment_tags, container, false);
         tagsList = new ArrayList<>();
         createTags("Метка1", getResources().getDrawable(R.drawable.ic_oval_3));
-        createTags("Метка2",  getResources().getDrawable(R.drawable.ic_oval_3_1));
+        createTags("Метка2", getResources().getDrawable(R.drawable.ic_oval_3_1));
         RecyclerView recyclerViewTags = v.findViewById(R.id.recycler_fragment_tags);
         recyclerViewTags.setLayoutManager(new LinearLayoutManager(v.getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterTags(tagsList);
@@ -45,7 +47,7 @@ public class TagsFragment extends Fragment {
     }
 
     public void createTags(String someId, Drawable drawable) {
-        tags = new Tags();
+        Tags tags = new Tags();
         tags.setTags(someId, drawable);
         tagsList.add(tags);
     }

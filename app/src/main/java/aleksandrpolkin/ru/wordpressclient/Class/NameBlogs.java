@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient;
+package aleksandrpolkin.ru.wordpressclient.Class;
 
 import android.graphics.drawable.Drawable;
 
@@ -49,7 +49,7 @@ public class NameBlogs {
         this.align = align;
     }
 
-    public void setNameBlogs(String name, String date, String align, Drawable post, Drawable avatar){
+    public void setNameBlogs(String name, String date, String align, Drawable post, Drawable avatar) {
         this.date = date;
         this.post = post;
         this.name = name;

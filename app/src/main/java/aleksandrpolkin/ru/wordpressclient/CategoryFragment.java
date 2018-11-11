@@ -14,14 +14,16 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import aleksandrpolkin.ru.wordpressclient.Class.Category;
+import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterCategory;
+
 public class CategoryFragment extends Fragment {
 
 
     static final String FRAGMENT_TAG = "screen_fragment_category";
     private List<Category> categoryList;
-    private Category category;
 
-    public static CategoryFragment createInstance(){
+    public static CategoryFragment createInstance() {
         return new CategoryFragment();
     }
 
@@ -30,7 +32,7 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.screen_fragment_category, container, false);
         categoryList = new ArrayList<>();
-        createCategory("Категория1","Описание категории 1");
+        createCategory("Категория1", "Описание категории 1");
         createCategory("Категория2", "Описание категории 2");
         RecyclerView recyclerViewCategory = v.findViewById(R.id.recycler_view_category);
         recyclerViewCategory.setLayoutManager(new LinearLayoutManager(v.getContext()));
@@ -40,7 +42,7 @@ public class CategoryFragment extends Fragment {
     }
 
     public void createCategory(String name, String description) {
-        category = new Category();
+        Category category = new Category();
         category.setCategory(name, description);
         categoryList.add(category);
     }

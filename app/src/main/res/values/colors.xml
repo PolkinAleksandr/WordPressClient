@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
     <color name="nav_header">#2A56C6</color>
@@ -9,4 +9,10 @@
     <color name="text_date">#878787</color>
     <color name="text_name">#2247A4</color>
     <color name="text_name_blog">#2A56C6</color>
+    <color name="red">#FF0000</color>
+    <color name="blue_dark">#001E68</color>
+    <color name="green_dark">#146800</color>
+    <color name="text_color_post_author">#4A4A4A</color>
+    <color name="text_color_post_name_blog">#CC4A4A4A</color>
+    <color name="text_color_authorization_button">#2A56C6</color>
 </resources>
