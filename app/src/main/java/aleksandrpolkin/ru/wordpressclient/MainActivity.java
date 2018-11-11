@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, OnMyBlogsClick {
 
     private BlogsFragment blogsFragment;
     private TagsFragment tagsFragment;
@@ -114,5 +114,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    @Override
+    public void setOnMyClick() {
+        startActivity(NameBlogsActivity.createNewIntent(this));
     }
 }

@@ -6,4 +6,7 @@
     <color name="nav_header">#2A56C6</color>
     <color name="recycler_blogs_image_background">#D8D8D8</color>
     <color name="recycler_background">#ECEFF1</color>
+    <color name="text_date">#878787</color>
+    <color name="text_name">#2247A4</color>
+    <color name="text_name_blog">#2A56C6</color>
 </resources>

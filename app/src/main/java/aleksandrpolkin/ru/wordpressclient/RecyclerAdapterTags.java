@@ -45,7 +45,7 @@ public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTag
         public ViewHolder(View itemView) {
             super(itemView);
             someId = itemView.findViewById(R.id.recycler_tags_text);
-            imageView = itemView.findViewById(R.id.recycler_tags_image);
+            imageView = itemView.findViewById(R.id.image_post);
         }
 
         void setDataset(final Tags tags){

@@ -19,4 +19,5 @@
     <string name="text_tittle_blogs">Мои блоги</string>
     <string name="text_tittle_markers">Метки</string>
     <string name="text_tittle_category">Категории</string>
+    <string name="text_tittle_blogs_name">Название блога</string>
 </resources>

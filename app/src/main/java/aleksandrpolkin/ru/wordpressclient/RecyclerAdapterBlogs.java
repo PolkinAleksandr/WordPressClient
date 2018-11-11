@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class RecyclerAdapterBlogs  extends RecyclerView.Adapter<RecyclerAdapterBlogs.ViewHolder>{
+public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.ViewHolder>{
 
     private List<Blogs> blogsList;
 
@@ -41,6 +41,7 @@ public class RecyclerAdapterBlogs  extends RecyclerView.Adapter<RecyclerAdapterB
         private TextView someId;
         private TextView myBlogsWord;
         private ImageView imageView;
+        private OnMyBlogsClick onMyBlogsClick;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -52,6 +53,13 @@ public class RecyclerAdapterBlogs  extends RecyclerView.Adapter<RecyclerAdapterB
         void setDataset(final Blogs blogs){
             someId.setText(blogs.getSomeId());
             myBlogsWord.setText(blogs.getMyBlogsWord());
+            onMyBlogsClick = (OnMyBlogsClick) imageView.getContext();
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onMyBlogsClick.setOnMyClick();
+                }
+            });
         }
     }
 }
