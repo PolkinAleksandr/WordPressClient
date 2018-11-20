@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
 
@@ -44,6 +46,15 @@ public class MainActivity extends AppCompatActivity
                 .replace(R.id.fragment_container, blogsFragment, BlogsFragment.FRAGMENT_TAG);
         fragmentTransaction.commit();
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_blogs));
+
+        View view = navigationView.getHeaderView(0);
+        ViewGroup viewGroup = view.findViewById(R.id.nav_header_profile_constr);
+        viewGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ProfileActivity.createNewIntent(MainActivity.this));
+            }
+        });
     }
 
     @Override
@@ -104,7 +115,7 @@ public class MainActivity extends AppCompatActivity
                     .replace(R.id.fragment_container, categoryFragment, CategoryFragment.FRAGMENT_TAG);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_markers) {
-            startActivity(ProfileActivity.createNewIntent(this));
+
         } else if (id == R.id.nav_favorite) {
             startActivity(AuthorizationActivity.createNewIntent(this));
         }/* else if (id == R.id.nav_send) {
