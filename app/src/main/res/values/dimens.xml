@@ -68,4 +68,5 @@
     <dimen name="text_size_authorization">36sp</dimen>
     <dimen name="margin_top_authorization_text">228dp</dimen>
     <dimen name="height_nav_header_profile_constr">120dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
 </resources>
