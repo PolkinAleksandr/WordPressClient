@@ -70,4 +70,5 @@
     <dimen name="height_nav_header_profile_constr">120dp</dimen>
     <dimen name="spacing_small">8dp</dimen>
     <dimen name="spacing_xxlarge">16dp</dimen>
+    <dimen name="spacing_xlarge">14dp</dimen>
 </resources>
