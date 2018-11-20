@@ -10,7 +10,6 @@
     android:paddingBottom="@dimen/spacing_small"
     android:paddingLeft="@dimen/spacing_small"
     android:paddingRight="@dimen/spacing_small"
-    android:paddingTop="@dimen/spacing_small"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <android.support.constraint.ConstraintLayout
