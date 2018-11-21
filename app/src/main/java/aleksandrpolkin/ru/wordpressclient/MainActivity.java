@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
 
@@ -48,8 +50,15 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_blogs));
 
         View view = navigationView.getHeaderView(0);
-        ViewGroup viewGroup = view.findViewById(R.id.nav_header_profile_constr);
-        viewGroup.setOnClickListener(new View.OnClickListener() {
+        TextView textHeader = view.findViewById(R.id.text_view_title);
+        textHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ProfileActivity.createNewIntent(MainActivity.this));
+            }
+        });
+        ImageView avatarHeader = view.findViewById(R.id.image_view_avatar);
+        avatarHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(ProfileActivity.createNewIntent(MainActivity.this));

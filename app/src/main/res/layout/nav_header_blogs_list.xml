@@ -21,6 +21,7 @@
         android:layout_marginTop="@dimen/spacing_small"
         android:gravity="center_vertical"
         android:paddingStart="@dimen/spacing_xxsmall"
+        android:clickable="true"
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="@dimen/font_xlarge"
@@ -28,7 +29,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toEndOf="@+id/image_view_avatar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/image_view_avatar"
@@ -39,6 +42,8 @@
         android:layout_marginTop="@dimen/spacing_small"
         android:adjustViewBounds="false"
         android:background="@drawable/ic_avatar"
+        android:clickable="true"
+        android:focusable="true"
         android:contentDescription="@string/nav_header_desc"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="@+id/text_view_title"
