@@ -23,12 +23,12 @@
     <dimen name="nav_header_height">178dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="recycler_blogs_width">340dp</dimen>
-    <dimen name="recycler_blogs_height">80dp</dimen>
-    <dimen name="recycler_blogs_image">36dp</dimen>
+    <dimen name="height_recycler_blogs">80dp</dimen>
+    <dimen name="size_recycler_blogs_image">36dp</dimen>
     <dimen name="recycler_marker_height">43dp</dimen>
     <dimen name="recycler_tags_constraint_start">12dp</dimen>
     <dimen name="recycler_blogs_constraint_start">21dp</dimen>
-    <dimen name="elevation_cardview">5dp</dimen>
+    <dimen name="elevation_medium">5dp</dimen>
     <dimen name="guideline_begin_name">80dp</dimen>
     <dimen name="guideline_end_blogs">16dp</dimen>
     <dimen name="margin_top_card_blogs">8dp</dimen>
