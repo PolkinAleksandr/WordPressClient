@@ -73,4 +73,7 @@
     <dimen name="spacing_xlarge">14dp</dimen>
     <dimen name="font_xlarge">18sp</dimen>
     <dimen name="font_large">14sp</dimen>
+    <dimen name="height_text_view_tittle">126dp</dimen>
+    <dimen name="spacing_huge">20dp</dimen>
+    <dimen name="spacing_xxsmall">4dp</dimen>
 </resources>
