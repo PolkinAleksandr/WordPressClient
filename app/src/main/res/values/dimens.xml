@@ -34,4 +34,5 @@
     <dimen name="size_button_change_avatar">30dp</dimen>
     <dimen name="corner_xsmall">6dp</dimen>
     <dimen name="size_image_avatar">40dp</dimen>
+    <dimen name="height_header_constr">178dp</dimen>
 </resources>
