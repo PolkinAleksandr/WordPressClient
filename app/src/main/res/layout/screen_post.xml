@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing_small"
                 android:layout_marginEnd="@dimen/spacing_small"
-                android:layout_marginStart="@dimen/margin_start_post_text"
+                android:layout_marginStart="@dimen/spacing_xxlarge"
                 android:layout_marginTop="@dimen/spacing_xxsmall"
                 android:drawablePadding="@dimen/spacing_xsmall"
                 android:drawableStart="@drawable/ic_access_time_black_24dp"
