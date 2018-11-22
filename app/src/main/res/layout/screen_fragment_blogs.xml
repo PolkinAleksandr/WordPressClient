@@ -10,6 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingTop="@dimen/padding_top_recycler_blogs" />
+        android:paddingTop="@dimen/spacing_xlarge" />
 
 </android.support.constraint.ConstraintLayout>
