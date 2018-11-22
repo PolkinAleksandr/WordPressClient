@@ -80,7 +80,7 @@
     <dimen name="margin_top_text_input">1dp</dimen>
     <dimen name="margin_top_sign_in_button">307dp</dimen>
     <dimen name="margin_top_sign_out_button">380dp</dimen>
-    <dimen name="text_size_authorization">36sp</dimen>
+    <dimen name="font_xxxlarge">36sp</dimen>
     <dimen name="margin_top_authorization_text">228dp</dimen>
     <dimen name="corner_xsmall">6dp</dimen>
     <dimen name="size_image_avatar">40dp</dimen>
