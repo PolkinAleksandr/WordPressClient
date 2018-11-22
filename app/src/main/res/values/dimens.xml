@@ -38,7 +38,7 @@
     <dimen name="padding_top_recycler_blogs">13dp</dimen>
     <dimen name="height_recycler_category">50dp</dimen>
     <dimen name="guideline_begin_category">11dp</dimen>
-    <dimen name="fab">60dp</dimen>
+    <dimen name="size_fab">60dp</dimen>
     <dimen name="text_date">8sp</dimen>
     <dimen name="text_name">13sp</dimen>
     <dimen name="text_name_blog">14sp</dimen>
