@@ -37,7 +37,7 @@
     <dimen name="margin_start_card_blogs">10dp</dimen>
     <dimen name="padding_top_recycler_blogs">13dp</dimen>
     <dimen name="margin_bottom_card_tags">3dp</dimen>
-    <dimen name="recycler_category_height">50dp</dimen>
+    <dimen name="height_recycler_category">50dp</dimen>
     <dimen name="guideline_begin_category">11dp</dimen>
     <dimen name="fab">60dp</dimen>
     <dimen name="text_date">8sp</dimen>
