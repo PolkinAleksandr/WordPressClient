@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/guideline_begin_name"
+            app:layout_constraintGuide_begin="@dimen/guideline_for_text_blogs"
             app:layout_constraintStart_toStartOf="parent" />
 
         <android.support.constraint.Guideline

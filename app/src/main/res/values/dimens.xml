@@ -29,7 +29,7 @@
     <dimen name="recycler_tags_constraint_start">12dp</dimen>
     <dimen name="recycler_blogs_constraint_start">21dp</dimen>
     <dimen name="elevation_medium">5dp</dimen>
-    <dimen name="guideline_begin_name">80dp</dimen>
+    <dimen name="guideline_for_text_blogs">80dp</dimen>
     <dimen name="guideline_end_blogs">16dp</dimen>
     <dimen name="margin_top_card_blogs">8dp</dimen>
     <dimen name="margin_bottom_card_blogs">8dp</dimen>
@@ -84,4 +84,5 @@
     <dimen name="text_size_authorization">36sp</dimen>
     <dimen name="margin_top_authorization_text">228dp</dimen>
     <dimen name="corner_xsmall">6dp</dimen>
+    <dimen name="size_image_avatar">40dp</dimen>
 </resources>
