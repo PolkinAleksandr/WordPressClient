@@ -26,7 +26,7 @@
     <style name="InputTextLayout">
         <item name="android:background">@android:color/white</item>
         <item name="android:textColorHint">@color/text_color_post_author</item>
-        <item name="android:elevation" tools:ignore="NewApi">@dimen/elevation_input_text</item>
+        <item name="android:elevation" tools:ignore="NewApi">@dimen/elevation_medium</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
