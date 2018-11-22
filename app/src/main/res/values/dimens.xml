@@ -71,7 +71,7 @@
     <dimen name="margin_horizontal_button">20dp</dimen>
     <dimen name="padding_bottom_post_constraint">160dp</dimen>
     <dimen name="margin_top_profile_avatar">15dp</dimen>
-    <dimen name="button_change_avatar">30dp</dimen>
+    <dimen name="size_button_change_avatar">30dp</dimen>
     <dimen name="margin_horizontal_profile_linear">10dp</dimen>
     <dimen name="margin_top_profile_linear">150dp</dimen>
     <dimen name="text_edit_profile">12sp</dimen>
