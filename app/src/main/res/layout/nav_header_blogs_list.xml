@@ -3,55 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/height_header_constr"
+    android:layout_height="wrap_content"
     android:background="@color/nav_header"
-    android:gravity="bottom"
-    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_small"
     android:paddingLeft="@dimen/spacing_small"
     android:paddingRight="@dimen/spacing_small"
-    android:paddingTop="@dimen/spacing_small"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_text_view_tittle"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_huge"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/spacing_xxsmall"
+        android:clickable="true"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="@dimen/font_xlarge"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_header_mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/image_view_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry"
+        android:focusable="true" />
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image_view_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_small"
         android:layout_marginEnd="@dimen/spacing_small"
         android:layout_marginStart="@dimen/spacing_small"
         android:layout_marginTop="@dimen/spacing_small"
         android:adjustViewBounds="false"
         android:background="@drawable/ic_avatar"
+        android:clickable="true"
+        android:focusable="true"
         android:contentDescription="@string/nav_header_desc"
         android:scaleType="center"
-        app:layout_constraintBottom_toTopOf="@id/textView_header"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/text_view_title"
         app:srcCompat="@drawable/ic_layer_1"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/textView_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_small"
-        android:layout_marginEnd="@dimen/spacing_small"
-        android:layout_marginStart="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:paddingTop="@dimen/spacing_small"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView_header"
+        android:id="@+id/text_view_header_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/spacing_small"
@@ -59,12 +63,13 @@
         android:layout_marginStart="@dimen/spacing_small"
         android:layout_marginTop="@dimen/spacing_small"
         android:text="@string/nav_header_subtitle"
+        android:textSize="@dimen/font_large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/nav_header_spinner"
@@ -73,11 +78,11 @@
         android:layout_marginEnd="@dimen/spacing_small"
         android:layout_marginStart="@dimen/spacing_small"
         android:layout_marginTop="@dimen/spacing_small"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_header"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_header_mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_header"
-        app:layout_constraintTop_toTopOf="@+id/textView_header"
+        app:layout_constraintStart_toEndOf="@+id/text_view_header_mail"
+        app:layout_constraintTop_toTopOf="@+id/text_view_header_mail"
         app:layout_constraintVertical_bias="0.86" />
 
 </android.support.constraint.ConstraintLayout>
