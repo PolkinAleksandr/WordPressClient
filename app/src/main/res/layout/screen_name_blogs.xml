@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows = "true"
-    tools:context=".NameBlogsActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".NameBlogsActivity"
+    >
 
 
     <android.support.design.widget.FloatingActionButton
@@ -24,7 +26,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_name_blogs"
@@ -37,6 +40,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00999999"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="335dp" />
+        tools:layout_editor_absoluteX="335dp"
+        />
 
 </android.support.constraint.ConstraintLayout>

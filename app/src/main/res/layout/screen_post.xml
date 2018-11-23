@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostActivity">
+    tools:context=".PostActivity"
+    >
 
     <ScrollView
         android:id="@+id/scroll_view_post"
@@ -17,13 +19,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="RtlSymmetry">
+        tools:ignore="RtlSymmetry"
+        >
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/spacing_huge"
-            android:layout_marginBottom="@dimen/spacing_huge">
+            android:layout_marginBottom="@dimen/spacing_huge"
+            >
 
             <TextView
                 android:id="@+id/text_post_date"
@@ -43,7 +47,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_post_tittle"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="Дата создания" />
+                tools:text="Дата создания"
+                />
 
             <TextView
                 android:id="@+id/text_post_tittle"
@@ -62,7 +67,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_post_category"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="Заголовок поста" />
+                tools:text="Заголовок поста"
+                />
 
             <TextView
                 android:id="@+id/text_post_category"
@@ -83,7 +89,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="Категория" />
+                tools:text="Категория"
+                />
 
             <ImageView
                 android:id="@+id/image_post"
@@ -97,7 +104,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_post_date"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/material_image_3_big" />
+                app:srcCompat="@drawable/material_image_3_big"
+                />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycle_view_post_tag"
@@ -112,8 +120,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_post"
-                app:layout_constraintVertical_bias="0.0">
-
+                app:layout_constraintVertical_bias="0.0"
+                >
             </android.support.v7.widget.RecyclerView>
 
             <ImageView
@@ -131,7 +139,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/recycle_view_post_tag"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_avatar_astronaut"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat"
+                />
 
             <TextView
                 android:id="@+id/text_author"
@@ -148,7 +157,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/image_avatar"
                 app:layout_constraintTop_toTopOf="@+id/image_avatar"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                />
 
             <TextView
                 android:id="@+id/text_name_blog"
@@ -163,7 +173,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/image_avatar"
                 app:layout_constraintTop_toTopOf="@+id/image_avatar"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                />
 
             <TextView
                 android:id="@+id/text_post_description"
@@ -180,7 +191,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_avatar"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                />
 
             <Button
                 android:id="@+id/button_comments"
@@ -196,7 +208,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_post_description" />
+                app:layout_constraintTop_toBottomOf="@+id/text_post_description"
+                />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
@@ -216,7 +229,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="@+id/scroll_view_post"
         app:layout_constraintVertical_bias="1.0" />
+=======
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="1.0"
+        />
+>>>>>>> auto formatted on all layout
 
 </android.support.constraint.ConstraintLayout>

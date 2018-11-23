@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_tag"
@@ -8,7 +9,8 @@
     android:layout_marginEnd="@dimen/spacing_xlarge"
     android:elevation="0dp"
     app:cardBackgroundColor="@color/blue_dark"
-    app:cardCornerRadius="@dimen/corner_xsmall">
+    app:cardCornerRadius="@dimen/corner_xsmall"
+    >
 
     <TextView
         android:id="@+id/text_post_tag"
@@ -19,6 +21,6 @@
         android:layout_marginStart="@dimen/spacing_xsmall"
         android:textColor="@android:color/white"
         android:textSize="@dimen/font_xsmall"
-        tools:text="tag1" />
-
+        tools:text="tag1"
+        />
 </android.support.v7.widget.CardView>
