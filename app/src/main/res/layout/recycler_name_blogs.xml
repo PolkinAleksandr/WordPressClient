@@ -13,14 +13,14 @@
         android:layout_gravity="center_vertical">
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline2"
+            android:id="@+id/guideline_for_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="@dimen/guideline_for_text_blogs" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline3"
+            android:id="@+id/guideline_for_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -36,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline_for_image"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/material_image_3"
             tools:ignore="VectorDrawableCompat" />
@@ -55,7 +55,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_for_text"
             app:layout_constraintTop_toTopOf="@+id/image_avatar"
             app:layout_constraintVertical_bias="0.24000001"
             tools:text="Василий Петров" />
@@ -68,7 +68,7 @@
             android:layout_marginEnd="@dimen/spacing_small"
             android:layout_marginStart="@dimen/spacing_huge"
             android:layout_marginTop="@dimen/spacing_small"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_for_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_for_text"
             app:layout_constraintTop_toTopOf="@+id/image_avatar"
             app:layout_constraintVertical_bias="0.73"
             tools:ignore="SmallSp"
