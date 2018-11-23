@@ -45,8 +45,8 @@ public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapte
 
         ViewHolder(View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.recycler_category_name);
-            description = itemView.findViewById(R.id.recycler_category_description);
+            name = itemView.findViewById(R.id.text_category_name);
+            description = itemView.findViewById(R.id.text_category_description);
         }
 
         void setDataset(final Category category) {
