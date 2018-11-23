@@ -35,7 +35,7 @@ public class NameBlogsActivity extends AppCompatActivity implements OnMyClick {
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_blogs_name));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
