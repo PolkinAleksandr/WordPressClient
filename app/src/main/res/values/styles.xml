@@ -25,12 +25,20 @@
 
     <style name="InputTextLayout">
         <item name="android:background">@android:color/white</item>
-        <item name="android:textColorHint">@color/text_color_post_author</item>
         <item name="android:elevation" tools:ignore="NewApi">@dimen/elevation_medium</item>
+        <item name="android:paddingStart">@dimen/spacing_large</item>
+        <item name="android:paddingTop">@dimen/spacing_xxsmall</item>
+    </style>
+
+    <style name="InputTextLayoutHint">
+        <item name="android:textSize">@dimen/font_xsmall</item>
+        <item name="android:textColor">@color/text_color_post_author</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <dimen name="spacing_large">12dp</dimen>
+    <dimen name="font_xsmall">8sp</dimen>
 </resources>
