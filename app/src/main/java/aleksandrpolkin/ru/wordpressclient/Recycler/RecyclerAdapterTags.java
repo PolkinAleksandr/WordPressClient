@@ -42,18 +42,15 @@ public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTag
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView someId;
-        private ImageView imageView;
-
 
         ViewHolder(View itemView) {
             super(itemView);
             someId = itemView.findViewById(R.id.recycler_tags_text);
-            imageView = itemView.findViewById(R.id.image_post);
         }
 
         void setDataset(final Tags tags) {
             someId.setText(tags.getSomeId());
-            imageView.setImageDrawable(tags.getDrawable());
+            someId.setCompoundDrawablesWithIntrinsicBounds(tags.getDrawable(), null, null, null);
         }
     }
 }

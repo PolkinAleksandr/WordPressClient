@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recycler_name_blog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/spacing_medium">
+    android:layout_margin="@dimen/spacing_medium"
+    >
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="center_vertical"
+        >
 
         <ImageView
             android:id="@+id/image_post"
@@ -26,7 +29,8 @@
             app:layout_constraintTop_toBottomOf="@+id/image_avatar"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/material_image_3"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="VectorDrawableCompat"
+            />
 
         <TextView
             android:id="@+id/text_name"
@@ -46,7 +50,8 @@
             app:layout_constraintStart_toEndOf="@+id/image_avatar"
             app:layout_constraintTop_toTopOf="@+id/image_avatar"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="Василий Петров" />
+            tools:text="Василий Петров"
+            />
 
         <ImageView
             android:id="@+id/image_avatar"
@@ -63,7 +68,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_avatar_astronaut"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="VectorDrawableCompat"
+            />
 
         <TextView
             android:id="@+id/text_date"
@@ -82,7 +88,8 @@
             app:layout_constraintTop_toTopOf="@+id/image_avatar"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="SmallSp"
-            tools:text="Сегодня, 13:45" />
+            tools:text="Сегодня, 13:45"
+            />
 
         <TextView
             android:id="@+id/text_align"
@@ -101,6 +108,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_post"
             app:layout_constraintVertical_bias="0.77"
-            tools:text="Заголовок поста" />
+            tools:text="Заголовок поста"
+            />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,8 @@
     android:paddingBottom="@dimen/spacing_small"
     android:paddingLeft="@dimen/spacing_small"
     android:paddingRight="@dimen/spacing_small"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
 
 
     <TextView
@@ -19,9 +21,10 @@
         android:layout_marginEnd="@dimen/spacing_small"
         android:layout_marginStart="@dimen/spacing_huge"
         android:layout_marginTop="@dimen/spacing_small"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:paddingStart="@dimen/spacing_xxsmall"
-        android:clickable="true"
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="@dimen/font_xlarge"
@@ -31,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@+id/image_view_avatar"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlSymmetry"
-        android:focusable="true" />
+        />
 
     <ImageView
         android:id="@+id/image_view_avatar"
@@ -43,8 +46,8 @@
         android:adjustViewBounds="false"
         android:background="@drawable/ic_avatar"
         android:clickable="true"
-        android:focusable="true"
         android:contentDescription="@string/nav_header_desc"
+        android:focusable="true"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="@+id/text_view_title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +55,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text_view_title"
         app:srcCompat="@drawable/ic_layer_1"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"
+        />
 
     <TextView
         android:id="@+id/text_view_header_mail"
@@ -69,8 +73,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_avatar"
-        app:layout_constraintVertical_bias="0.9" />
-
+        app:layout_constraintVertical_bias="0.9"
+    />
 
     <Spinner
         android:id="@+id/nav_header_spinner"
@@ -84,6 +88,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/text_view_header_mail"
         app:layout_constraintTop_toTopOf="@+id/text_view_header_mail"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.86"
+        />
 
 </android.support.constraint.ConstraintLayout>
