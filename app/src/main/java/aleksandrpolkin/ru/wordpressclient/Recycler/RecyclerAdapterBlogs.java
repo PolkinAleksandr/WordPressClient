@@ -49,9 +49,9 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
 
         ViewHolder(View itemView) {
             super(itemView);
-            someId = itemView.findViewById(R.id.some_id);
-            myBlogsWord = itemView.findViewById(R.id.myblog_word);
-            imageView = itemView.findViewById(R.id.imageView_recycler_blogs);
+            someId = itemView.findViewById(R.id.text_name_blog);
+            myBlogsWord = itemView.findViewById(R.id.text_myblog_word);
+            imageView = itemView.findViewById(R.id.image_view_recycler_blogs);
         }
 
         void setDataset(final Blogs blogs) {

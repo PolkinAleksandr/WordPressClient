@@ -47,7 +47,7 @@ public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapter
         ViewHolder(View itemView) {
             super(itemView);
             text = itemView.findViewById(R.id.text_post_tag);
-            card = itemView.findViewById(R.id.card);
+            card = itemView.findViewById(R.id.card_tag);
         }
 
         void setDataset(final PostTag postTag) {

@@ -33,7 +33,7 @@ public class PostActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_post_tag));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
