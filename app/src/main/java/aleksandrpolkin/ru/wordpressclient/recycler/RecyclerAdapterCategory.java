@@ -12,7 +12,7 @@ import java.util.List;
 import aleksandrpolkin.ru.wordpressclient.data.Category;
 import aleksandrpolkin.ru.wordpressclient.R;
 
-public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapterCategory.ViewHolder> {
+public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapterCategory.CategoryViewHolder> {
 
     private List<Category> categoryList;
 
@@ -22,14 +22,14 @@ public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapte
 
     @NonNull
     @Override
-    public RecyclerAdapterCategory.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_category, parent, false);
-        return new RecyclerAdapterCategory.ViewHolder(v);
+        return new CategoryViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterCategory.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         holder.setDataset(categoryList.get(position));
     }
 
@@ -38,12 +38,12 @@ public class RecyclerAdapterCategory extends RecyclerView.Adapter<RecyclerAdapte
         return categoryList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    static class CategoryViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
         private TextView description;
 
-        ViewHolder(View itemView) {
+        CategoryViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.text_category_name);
             description = itemView.findViewById(R.id.text_category_description);

@@ -14,7 +14,7 @@ import aleksandrpolkin.ru.wordpressclient.data.Blogs;
 import aleksandrpolkin.ru.wordpressclient.myinterface.OnMyClick;
 import aleksandrpolkin.ru.wordpressclient.R;
 
-public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.ViewHolder> {
+public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.BlogsViewHolder> {
 
     private List<Blogs> blogsList;
 
@@ -24,14 +24,14 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
 
     @NonNull
     @Override
-    public RecyclerAdapterBlogs.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BlogsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_blogs, parent, false);
-        return new ViewHolder(v);
+        return new BlogsViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterBlogs.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BlogsViewHolder holder, int position) {
         holder.setDataset(blogsList.get(position));
     }
 
@@ -40,14 +40,14 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
         return blogsList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    static class BlogsViewHolder extends RecyclerView.ViewHolder {
 
         private TextView someId;
         private TextView myBlogsWord;
         private ImageView imageView;
         private OnMyClick onMyClick;
 
-        ViewHolder(View itemView) {
+        BlogsViewHolder(View itemView) {
             super(itemView);
             someId = itemView.findViewById(R.id.text_name_blog);
             myBlogsWord = itemView.findViewById(R.id.text_myblog_word);
