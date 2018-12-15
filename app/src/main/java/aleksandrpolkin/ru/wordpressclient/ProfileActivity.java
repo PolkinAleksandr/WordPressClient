@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextInputEditText name, second, about, login;
-
     public static Intent createNewIntent(Context context) {
         return new Intent(context, ProfileActivity.class);
     }
@@ -22,10 +20,10 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_profile));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        name = findViewById(R.id.text_profile_name);
-        second = findViewById(R.id.text_profile_second);
-        about = findViewById(R.id.text_profile_about);
-        login = findViewById(R.id.text_profile_login);
+        TextInputEditText name = findViewById(R.id.text_profile_name);
+        TextInputEditText second = findViewById(R.id.text_profile_second);
+        TextInputEditText about = findViewById(R.id.text_profile_about);
+        TextInputEditText login = findViewById(R.id.text_profile_login);
 
         name.setText(getResources().getString(R.string.text_profile_name));
         second.setText(getResources().getString(R.string.text_profile_second));
