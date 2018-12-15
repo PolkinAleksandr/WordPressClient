@@ -20,7 +20,7 @@ import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterBlogs;
 
 public class BlogsFragment extends Fragment {
 
-    static final String FRAGMENT_TAG = "fragment_blogs";
+    static final String FRAGMENT_BLOGS = "fragment_blogs";
     private List<Blogs> blogsList;
 
     public static BlogsFragment createInstance() {

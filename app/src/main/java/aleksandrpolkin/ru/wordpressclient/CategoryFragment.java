@@ -20,7 +20,7 @@ import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterCategory;
 public class CategoryFragment extends Fragment {
 
 
-    static final String FRAGMENT_TAG = "screen_fragment_category";
+    static final String FRAGMENT_CATEGORY = "screen_fragment_category";
     private List<Category> categoryList;
 
     public static CategoryFragment createInstance() {

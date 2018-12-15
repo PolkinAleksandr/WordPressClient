@@ -24,7 +24,6 @@
     <dimen name="guideline_for_text_blogs">80dp</dimen>
     <dimen name="guideline_end_blogs">16dp</dimen>
     <dimen name="height_recycler_category">50dp</dimen>
-    <dimen name="guideline_begin_category">11dp</dimen>
     <dimen name="size_fab">60dp</dimen>
     <dimen name="size_post_text_category">12sp</dimen>
     <dimen name="size_post_text_tittle">27sp</dimen>

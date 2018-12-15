@@ -25,9 +25,6 @@
         <activity
             android:name=".PostActivity"
             android:parentActivityName=".NameBlogsActivity" />
-        <activity
-            android:name=".ProfileActivity"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".AuthorizationActivity"
             android:theme="@style/AppTheme.Authorization"/>
     </application>

@@ -2,6 +2,7 @@ package aleksandrpolkin.ru.wordpressclient;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity
     private BlogsFragment blogsFragment;
     private FragmentTransaction fragmentTransaction;
     private Toolbar toolbar;
+    private DrawerLayout drawer;
 
 
     @Override
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -44,23 +46,24 @@ public class MainActivity extends AppCompatActivity
 
         blogsFragment = BlogsFragment.createInstance();
         fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, blogsFragment, BlogsFragment.FRAGMENT_TAG);
+                .replace(R.id.fragment_container, blogsFragment, BlogsFragment.FRAGMENT_BLOGS);
         fragmentTransaction.commit();
         getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_blogs));
 
         View view = navigationView.getHeaderView(0);
         TextView textHeader = view.findViewById(R.id.text_view_title);
+        final ProfileFragment profileFragment = ProfileFragment.createInstance();
         textHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(ProfileActivity.createNewIntent(MainActivity.this));
+                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE);
             }
         });
         ImageView avatarHeader = view.findViewById(R.id.image_view_avatar);
         avatarHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(ProfileActivity.createNewIntent(MainActivity.this));
+                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE);
             }
         });
     }
@@ -105,23 +108,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_blogs) {
-            toolbar.setTitle(getResources().getString(R.string.text_tittle_blogs));
-            blogsFragment = BlogsFragment.createInstance();
-            fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, blogsFragment, BlogsFragment.FRAGMENT_TAG);
-            fragmentTransaction.commit();
+            openFragment(getResources().getString(R.string.text_tittle_blogs), blogsFragment, BlogsFragment.FRAGMENT_BLOGS);
         } else if (id == R.id.nav_tags) {
-            toolbar.setTitle(getResources().getString(R.string.text_tittle_markers));
             TagsFragment tagsFragment = TagsFragment.createInstance();
-            fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, tagsFragment, TagsFragment.FRAGMENT_TAG);
-            fragmentTransaction.commit();
+            openFragment(getResources().getString(R.string.text_tittle_markers), tagsFragment, TagsFragment.FRAGMENT_TAG);
         } else if (id == R.id.nav_category) {
-            toolbar.setTitle(getResources().getString(R.string.text_tittle_category));
             CategoryFragment categoryFragment = CategoryFragment.createInstance();
-            fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, categoryFragment, CategoryFragment.FRAGMENT_TAG);
-            fragmentTransaction.commit();
+            openFragment(getResources().getString(R.string.text_tittle_category), categoryFragment, CategoryFragment.FRAGMENT_CATEGORY);
         } else if (id == R.id.nav_markers) {
 
         } else if (id == R.id.nav_favorite) {
@@ -130,9 +123,15 @@ public class MainActivity extends AppCompatActivity
 
         }*/
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void openFragment(String title, Fragment fragment, String tag){
+        toolbar.setTitle(title);
+        fragmentTransaction = getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragment, tag);
+        fragmentTransaction.commit();
+        drawer.closeDrawer(GravityCompat.START);
     }
 
 
