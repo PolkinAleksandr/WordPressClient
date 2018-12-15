@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.Blogs;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterBlogs;
+import aleksandrpolkin.ru.wordpressclient.data.Blogs;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterBlogs;
 
 
 public class BlogsFragment extends Fragment {

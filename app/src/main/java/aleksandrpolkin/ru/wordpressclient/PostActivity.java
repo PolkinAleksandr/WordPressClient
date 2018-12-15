@@ -14,8 +14,8 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.PostTag;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterPostTag;
+import aleksandrpolkin.ru.wordpressclient.data.PostTag;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterPostTag;
 
 public class PostActivity extends AppCompatActivity {
 

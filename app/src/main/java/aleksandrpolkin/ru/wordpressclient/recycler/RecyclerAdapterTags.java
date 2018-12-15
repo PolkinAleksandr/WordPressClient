@@ -1,16 +1,15 @@
-package aleksandrpolkin.ru.wordpressclient.Recycler;
+package aleksandrpolkin.ru.wordpressclient.recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.Tags;
+import aleksandrpolkin.ru.wordpressclient.data.Tags;
 import aleksandrpolkin.ru.wordpressclient.R;
 
 public class RecyclerAdapterTags extends RecyclerView.Adapter<RecyclerAdapterTags.ViewHolder> {

@@ -15,9 +15,9 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.NameBlogs;
-import aleksandrpolkin.ru.wordpressclient.Interface.OnMyClick;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterNameBlogs;
+import aleksandrpolkin.ru.wordpressclient.data.NameBlogs;
+import aleksandrpolkin.ru.wordpressclient.myinterface.OnMyClick;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterNameBlogs;
 
 public class NameBlogsActivity extends AppCompatActivity implements OnMyClick {
 

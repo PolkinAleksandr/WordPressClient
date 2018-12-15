@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient.Class;
+package aleksandrpolkin.ru.wordpressclient.data;
 
 import android.graphics.drawable.Drawable;
 

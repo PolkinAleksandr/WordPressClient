@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient.Class;
+package aleksandrpolkin.ru.wordpressclient.data;
 
 public class PostTag {
     private int color;

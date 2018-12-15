@@ -15,8 +15,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.Tags;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterTags;
+import aleksandrpolkin.ru.wordpressclient.data.Tags;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterTags;
 
 
 /**

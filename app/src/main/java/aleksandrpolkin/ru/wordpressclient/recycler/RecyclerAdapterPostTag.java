@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient.Recycler;
+package aleksandrpolkin.ru.wordpressclient.recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.PostTag;
+import aleksandrpolkin.ru.wordpressclient.data.PostTag;
 import aleksandrpolkin.ru.wordpressclient.R;
 
 public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapterPostTag.ViewHolder> {

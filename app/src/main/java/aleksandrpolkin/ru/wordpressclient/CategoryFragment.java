@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.Category;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterCategory;
+import aleksandrpolkin.ru.wordpressclient.data.Category;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterCategory;
 
 public class CategoryFragment extends Fragment {
 
