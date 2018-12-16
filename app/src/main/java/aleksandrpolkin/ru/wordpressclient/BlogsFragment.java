@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -33,6 +35,7 @@ public class BlogsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.screen_fragment_blogs, container, false);
+        setHasOptionsMenu(true);
         blogsList = new ArrayList<>();
         createBlogs("Мой блог", "myblog.wordpress.com", null);
         createBlogs("Мой блог1", "myblog1.wordpress.com", null);

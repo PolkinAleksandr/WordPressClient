@@ -34,7 +34,7 @@ public class PostFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.screen_post, container, false);
-
+        setHasOptionsMenu(true);
         FloatingActionButton fab = v.findViewById(R.id.fab_comments);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +54,13 @@ public class PostFragment extends Fragment {
         recyclerViewNameBlog.setLayoutManager(linearLayoutManager);
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterPostTag(postTagList);
         recyclerViewNameBlog.setAdapter(adapterRecycler);
-
         return v;
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        menu.setGroupVisible(R.id.main_menu_group, false);
         inflater.inflate(R.menu.post, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
