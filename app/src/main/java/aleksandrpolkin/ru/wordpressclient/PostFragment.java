@@ -1,15 +1,18 @@
 package aleksandrpolkin.ru.wordpressclient;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,23 +20,24 @@ import java.util.List;
 import aleksandrpolkin.ru.wordpressclient.data.PostTag;
 import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterPostTag;
 
-public class PostActivity extends AppCompatActivity {
-
-    public static Intent createNewIntent(Context context) {
-        return new Intent(context, PostActivity.class);
-    }
+public class PostFragment extends Fragment {
 
     private List<PostTag> postTagList;
+    static final String FRAGMENT_POST = "fragment_post";
+
+    public static PostFragment createInstance() {
+        return new PostFragment();
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.screen_post);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_post_tag));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        View v = inflater.inflate(R.layout.screen_post, container, false);
 
-        FloatingActionButton fab = findViewById(R.id.fab_add);
+//        getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_post_tag));
+//       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        FloatingActionButton fab = v.findViewById(R.id.fab_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,25 +50,27 @@ public class PostActivity extends AppCompatActivity {
         createPostTag("Тег1", getResources().getColor(R.color.red));
         createPostTag("Тег2", getResources().getColor(R.color.green_dark));
         createPostTag("Длинный тег", getResources().getColor(R.color.blue_dark));
-        RecyclerView recyclerViewNameBlog = findViewById(R.id.recycle_view_post_tag);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        RecyclerView recyclerViewNameBlog = v.findViewById(R.id.recycle_view_post_tag);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewNameBlog.setLayoutManager(linearLayoutManager);
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterPostTag(postTagList);
         recyclerViewNameBlog.setAdapter(adapterRecycler);
+
+        return v;
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.post, menu);
-        return true;
+        inflater.inflate(R.menu.post, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        finish();
+//    }
 
     public void createPostTag(String text, int color) {
         PostTag postTag = new PostTag();

@@ -36,7 +36,7 @@ public class BlogsFragment extends Fragment {
         createBlogs("Мой блог1", "myblog1.wordpress.com", null);
         RecyclerView recyclerViewBlogs = v.findViewById(R.id.recycler_blogs);
         recyclerViewBlogs.setLayoutManager(new LinearLayoutManager(v.getContext()));
-        RecyclerView.Adapter adapterRecycler = new RecyclerAdapterBlogs(blogsList);
+        RecyclerView.Adapter adapterRecycler = new RecyclerAdapterBlogs(blogsList, NameBlogsFragment.FRAGMENT_NAME_BLOG);
         recyclerViewBlogs.setAdapter(adapterRecycler);
         return v;
     }

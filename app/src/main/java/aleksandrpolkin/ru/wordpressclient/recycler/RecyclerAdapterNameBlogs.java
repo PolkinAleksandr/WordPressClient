@@ -17,9 +17,11 @@ import aleksandrpolkin.ru.wordpressclient.R;
 public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapterNameBlogs.NameBlogViewHolder> {
 
     private List<NameBlogs> nameBlogs;
+    private String tag;
 
-    public RecyclerAdapterNameBlogs(List<NameBlogs> nameBlogsList) {
+    public RecyclerAdapterNameBlogs(List<NameBlogs> nameBlogsList, String tag) {
         this.nameBlogs = nameBlogsList;
+        this.tag = tag;
     }
 
     @NonNull
@@ -32,7 +34,7 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
 
     @Override
     public void onBindViewHolder(@NonNull NameBlogViewHolder holder, int position) {
-        holder.setDataset(nameBlogs.get(position));
+        holder.setDataset(nameBlogs.get(position), tag);
     }
 
     @Override
@@ -59,7 +61,7 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
 
         }
 
-        void setDataset(final NameBlogs nameBlogs) {
+        void setDataset(final NameBlogs nameBlogs, final String tag) {
             name.setText(nameBlogs.getName());
             time.setText(nameBlogs.getDate());
             align.setText(nameBlogs.getAlign());
@@ -69,7 +71,7 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onMyClick.setOnMyClick();
+                    onMyClick.setOnMyClick(tag);
                 }
             });
         }

@@ -56,14 +56,14 @@ public class MainActivity extends AppCompatActivity
         textHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE);
+                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE, null);
             }
         });
         ImageView avatarHeader = view.findViewById(R.id.image_view_avatar);
         avatarHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE);
+                openFragment(getResources().getString(R.string.text_tittle_profile), profileFragment, ProfileFragment.FRAGMENT_PROFILE, null);
             }
         });
     }
@@ -108,13 +108,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_blogs) {
-            openFragment(getResources().getString(R.string.text_tittle_blogs), blogsFragment, BlogsFragment.FRAGMENT_BLOGS);
+            openFragment(getResources().getString(R.string.text_tittle_blogs), blogsFragment, BlogsFragment.FRAGMENT_BLOGS, null);
         } else if (id == R.id.nav_tags) {
             TagsFragment tagsFragment = TagsFragment.createInstance();
-            openFragment(getResources().getString(R.string.text_tittle_markers), tagsFragment, TagsFragment.FRAGMENT_TAG);
+            openFragment(getResources().getString(R.string.text_tittle_markers), tagsFragment, TagsFragment.FRAGMENT_TAG, null);
         } else if (id == R.id.nav_category) {
             CategoryFragment categoryFragment = CategoryFragment.createInstance();
-            openFragment(getResources().getString(R.string.text_tittle_category), categoryFragment, CategoryFragment.FRAGMENT_CATEGORY);
+            openFragment(getResources().getString(R.string.text_tittle_category), categoryFragment, CategoryFragment.FRAGMENT_CATEGORY, null);
         } else if (id == R.id.nav_markers) {
 
         } else if (id == R.id.nav_favorite) {
@@ -126,17 +126,29 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void openFragment(String title, Fragment fragment, String tag){
+    private void openFragment(String title, Fragment fragment, String tag, String back){
         toolbar.setTitle(title);
         fragmentTransaction = getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, fragment, tag);
+        if (back != null) fragmentTransaction.addToBackStack(back);
         fragmentTransaction.commit();
         drawer.closeDrawer(GravityCompat.START);
     }
 
 
     @Override
-    public void setOnMyClick() {
-        startActivity(NameBlogsActivity.createNewIntent(this));
+    public void setOnMyClick(String tag) {
+        switch (tag) {
+            case NameBlogsFragment.FRAGMENT_NAME_BLOG:
+                NameBlogsFragment nameBlogsFragment = NameBlogsFragment.createInstance();
+                openFragment(getResources().getString(R.string.text_tittle_blogs_name), nameBlogsFragment, NameBlogsFragment.FRAGMENT_NAME_BLOG, BlogsFragment.FRAGMENT_BLOGS);
+
+            case BlogsFragment.FRAGMENT_BLOGS:
+                openFragment(getResources().getString(R.string.text_tittle_blogs), blogsFragment, BlogsFragment.FRAGMENT_BLOGS, null);
+
+            case PostFragment.FRAGMENT_POST:
+                PostFragment postFragment = PostFragment.createInstance();
+                openFragment(getResources().getString(R.string.text_tittle_post_tag), postFragment, PostFragment.FRAGMENT_POST, NameBlogsFragment.FRAGMENT_NAME_BLOG);
+        }
     }
 }

@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import aleksandrpolkin.ru.wordpressclient.BlogsFragment;
+import aleksandrpolkin.ru.wordpressclient.NameBlogsFragment;
 import aleksandrpolkin.ru.wordpressclient.data.Blogs;
 import aleksandrpolkin.ru.wordpressclient.myinterface.OnMyClick;
 import aleksandrpolkin.ru.wordpressclient.R;
@@ -17,9 +19,11 @@ import aleksandrpolkin.ru.wordpressclient.R;
 public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBlogs.BlogsViewHolder> {
 
     private List<Blogs> blogsList;
+    private String tag;
 
-    public RecyclerAdapterBlogs(List<Blogs> blogsList) {
+    public RecyclerAdapterBlogs(List<Blogs> blogsList, String tag) {
         this.blogsList = blogsList;
+        this.tag = tag;
     }
 
     @NonNull
@@ -32,7 +36,7 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
 
     @Override
     public void onBindViewHolder(@NonNull BlogsViewHolder holder, int position) {
-        holder.setDataset(blogsList.get(position));
+        holder.setDataset(blogsList.get(position), tag);
     }
 
     @Override
@@ -54,14 +58,14 @@ public class RecyclerAdapterBlogs extends RecyclerView.Adapter<RecyclerAdapterBl
             imageView = itemView.findViewById(R.id.image_view_recycler_blogs);
         }
 
-        void setDataset(final Blogs blogs) {
+        void setDataset(final Blogs blogs, final String tag) {
             someId.setText(blogs.getSomeId());
             myBlogsWord.setText(blogs.getMyBlogsWord());
             onMyClick = (OnMyClick) itemView.getContext();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onMyClick.setOnMyClick();
+                    onMyClick.setOnMyClick(tag);
                 }
             });
         }
