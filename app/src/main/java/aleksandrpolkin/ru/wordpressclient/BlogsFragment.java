@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +41,15 @@ public class BlogsFragment extends Fragment {
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterBlogs(blogsList, NameBlogsFragment.FRAGMENT_NAME_BLOG);
         recyclerViewBlogs.setAdapter(adapterRecycler);
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            Toolbar toolbar = getActivity().findViewById(R.id.toolbar_main);
+            toolbar.setTitle(getResources().getString(R.string.text_tittle_blogs));
+        }
     }
 
     public void createBlogs(String someId, String myWord, Drawable drawable) {

@@ -142,13 +142,14 @@ public class MainActivity extends AppCompatActivity
             case NameBlogsFragment.FRAGMENT_NAME_BLOG:
                 NameBlogsFragment nameBlogsFragment = NameBlogsFragment.createInstance();
                 openFragment(getResources().getString(R.string.text_tittle_blogs_name), nameBlogsFragment, NameBlogsFragment.FRAGMENT_NAME_BLOG, BlogsFragment.FRAGMENT_BLOGS);
-
+                break;
             case BlogsFragment.FRAGMENT_BLOGS:
                 openFragment(getResources().getString(R.string.text_tittle_blogs), blogsFragment, BlogsFragment.FRAGMENT_BLOGS, null);
-
+                break;
             case PostFragment.FRAGMENT_POST:
                 PostFragment postFragment = PostFragment.createInstance();
                 openFragment(getResources().getString(R.string.text_tittle_post_tag), postFragment, PostFragment.FRAGMENT_POST, NameBlogsFragment.FRAGMENT_NAME_BLOG);
+                break;
         }
     }
 }

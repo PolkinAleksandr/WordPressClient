@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,10 +35,7 @@ public class PostFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.screen_post, container, false);
 
-//        getSupportActionBar().setTitle(getResources().getString(R.string.text_tittle_post_tag));
-//       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        FloatingActionButton fab = v.findViewById(R.id.fab_add);
+        FloatingActionButton fab = v.findViewById(R.id.fab_comments);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,10 +65,14 @@ public class PostFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        finish();
-//    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            Toolbar toolbar = getActivity().findViewById(R.id.toolbar_main);
+            toolbar.setTitle(getResources().getString(R.string.text_tittle_post_tag));
+        }
+    }
 
     public void createPostTag(String text, int color) {
         PostTag postTag = new PostTag();
