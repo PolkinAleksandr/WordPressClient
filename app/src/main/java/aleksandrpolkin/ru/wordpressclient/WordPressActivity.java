@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import aleksandrpolkin.ru.wordpressclient.myinterface.OnMyClick;
 
-public class MainActivity extends AppCompatActivity
+public class WordPressActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMyClick {
 
     private BlogsFragment blogsFragment;

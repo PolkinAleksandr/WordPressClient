@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".WordPressActivity"
             android:label="@string/title_activity_blogs_list"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,13 +20,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NameBlogsFragment"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".PostFragment"
-            android:parentActivityName=".NameBlogsFragment" />
-        <activity android:name=".AuthorizationActivity"
-            android:theme="@style/AppTheme.Authorization"/>
+            android:name=".AuthorizationActivity"
+            android:theme="@style/AppTheme.Authorization" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
