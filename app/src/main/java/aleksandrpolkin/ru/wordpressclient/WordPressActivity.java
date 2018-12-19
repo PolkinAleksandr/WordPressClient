@@ -118,7 +118,6 @@ public class WordPressActivity extends AppCompatActivity
         } else if (id == R.id.nav_markers) {
 
         } else if (id == R.id.nav_favorite) {
-            startActivity(AuthorizationActivity.createNewIntent(this));
         }/* else if (id == R.id.nav_send) {
 
         }*/
