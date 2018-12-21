@@ -1,5 +1,7 @@
 package aleksandrpolkin.ru.wordpressclient;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,11 +29,21 @@ public class AuthorizationFragment extends Fragment {
         Button logOut = view.findViewById(R.id.button_sign_out);
 
         final CallbackFragment callbackFragment = (CallbackFragment) getContext();
-
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callbackFragment.setCallbackFragment(LoginFragment.FRAGMENT_LOGIN);
+                if (callbackFragment != null) {
+                    callbackFragment.setCallbackFragment(LoginFragment.FRAGMENT_LOGIN);
+                }
+            }
+        });
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentAuth = new Intent(Intent.ACTION_VIEW);
+                intentAuth.setData(Uri.parse(AppController.AUTH_ADDRESS));
+                startActivity(intentAuth);
             }
         });
 

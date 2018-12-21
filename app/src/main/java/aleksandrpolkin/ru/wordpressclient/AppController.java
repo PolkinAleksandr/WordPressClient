@@ -11,20 +11,11 @@ public class AppController {
     static final String EXTRA_TOKEN = "token";
     static final String EXTRA_ERROR = "error";
     static final String SEPARATION = "&";
+    static final String LOGIN_ADDRESS = "https://public-api.wordpress.com/oauth2/authorize?response_type=token&client_id=64203&redirect_uri=https://aleksandrpolkin.ru.wordpressclient";
+    static final String AUTH_ADDRESS = "https://wordpress.com/start/ru?ref=homepage";
 
-    private String token;
 
     public static SharedPreferences getPreference(Context context){
         return context.getSharedPreferences(PREFERENCES_FILE_NAME, Context.MODE_PRIVATE);
     }
-
-    public void setToken(String uri){
-        int indexStart = uri.indexOf(FIND_TOKEN) + FIND_TOKEN.length();
-        int indexFinish = uri.indexOf("&");
-        token = uri.substring(indexStart, indexFinish);
-    }
-
-
-
-
 }

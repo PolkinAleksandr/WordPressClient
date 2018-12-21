@@ -3,12 +3,10 @@ package aleksandrpolkin.ru.wordpressclient;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 
 import aleksandrpolkin.ru.wordpressclient.myinterface.CallbackAuthorization;
 import aleksandrpolkin.ru.wordpressclient.myinterface.CallbackFragment;
@@ -42,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements CallbackFragment
                 LoginFragment loginFragment = LoginFragment.createInstance();
                 openFragment(loginFragment, LoginFragment.FRAGMENT_LOGIN);
                 break;
-            case AuthorizationFragment.FRAGMENT_AUTH:
+            default:
                 AuthorizationFragment authorizationFragment = AuthorizationFragment.createInstance();
                 openFragment(authorizationFragment, AuthorizationFragment.FRAGMENT_AUTH);
                 break;
