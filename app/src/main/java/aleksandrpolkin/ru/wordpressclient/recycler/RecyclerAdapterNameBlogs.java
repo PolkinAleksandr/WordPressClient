@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import aleksandrpolkin.ru.wordpressclient.data.NameBlogs;
-import aleksandrpolkin.ru.wordpressclient.myinterface.OnMyClick;
+import aleksandrpolkin.ru.wordpressclient.myinterface.CallbackFragment;
 import aleksandrpolkin.ru.wordpressclient.R;
 
 public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapterNameBlogs.NameBlogViewHolder> {
@@ -49,7 +49,7 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
         private TextView align;
         private ImageView avatar;
         private ImageView postImage;
-        private OnMyClick onMyClick;
+        private CallbackFragment callbackFragment;
 
         NameBlogViewHolder(View itemView) {
             super(itemView);
@@ -67,11 +67,11 @@ public class RecyclerAdapterNameBlogs extends RecyclerView.Adapter<RecyclerAdapt
             align.setText(nameBlogs.getAlign());
             avatar.setImageDrawable(nameBlogs.getAvatar());
             postImage.setImageDrawable(nameBlogs.getPost());
-            onMyClick = (OnMyClick) itemView.getContext();
+            callbackFragment = (CallbackFragment) itemView.getContext();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onMyClick.setOnMyClick(tag);
+                    callbackFragment.setCallbackFragment(tag);
                 }
             });
         }

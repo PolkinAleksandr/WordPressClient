@@ -21,17 +21,17 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.screen_fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.screen_fragment_profile, container, false);
 
-        TextInputEditText name = v.findViewById(R.id.text_profile_name);
-        TextInputEditText second = v.findViewById(R.id.text_profile_second);
-        TextInputEditText about = v.findViewById(R.id.text_profile_about);
-        TextInputEditText login = v.findViewById(R.id.text_profile_login);
+        TextInputEditText name = view.findViewById(R.id.text_profile_name);
+        TextInputEditText second = view.findViewById(R.id.text_profile_second);
+        TextInputEditText about = view.findViewById(R.id.text_profile_about);
+        TextInputEditText login = view.findViewById(R.id.text_profile_login);
 
         name.setText(getResources().getString(R.string.text_profile_name));
         second.setText(getResources().getString(R.string.text_profile_second));
         login.setText(getResources().getString(R.string.text_profile_login));
         about.setText(getResources().getString(R.string.text_profile_about));
-        return v;
+        return view;
     }
 }

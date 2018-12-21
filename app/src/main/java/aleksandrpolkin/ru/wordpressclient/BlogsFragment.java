@@ -34,16 +34,16 @@ public class BlogsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.screen_fragment_blogs, container, false);
+        View view = inflater.inflate(R.layout.screen_fragment_blogs, container, false);
         setHasOptionsMenu(true);
         blogsList = new ArrayList<>();
         createBlogs("Мой блог", "myblog.wordpress.com", null);
         createBlogs("Мой блог1", "myblog1.wordpress.com", null);
-        RecyclerView recyclerViewBlogs = v.findViewById(R.id.recycler_blogs);
-        recyclerViewBlogs.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        RecyclerView recyclerViewBlogs = view.findViewById(R.id.recycler_blogs);
+        recyclerViewBlogs.setLayoutManager(new LinearLayoutManager(view.getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterBlogs(blogsList, NameBlogsFragment.FRAGMENT_NAME_BLOG);
         recyclerViewBlogs.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     @Override

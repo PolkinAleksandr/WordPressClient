@@ -33,9 +33,9 @@ public class PostFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.screen_post, container, false);
+        View view = inflater.inflate(R.layout.screen_post, container, false);
         setHasOptionsMenu(true);
-        FloatingActionButton fab = v.findViewById(R.id.fab_comments);
+        FloatingActionButton fab = view.findViewById(R.id.fab_comments);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,13 +48,13 @@ public class PostFragment extends Fragment {
         createPostTag("Тег1", getResources().getColor(R.color.red));
         createPostTag("Тег2", getResources().getColor(R.color.green_dark));
         createPostTag("Длинный тег", getResources().getColor(R.color.blue_dark));
-        RecyclerView recyclerViewNameBlog = v.findViewById(R.id.recycle_view_post_tag);
+        RecyclerView recyclerViewNameBlog = view.findViewById(R.id.recycle_view_post_tag);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewNameBlog.setLayoutManager(linearLayoutManager);
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterPostTag(postTagList);
         recyclerViewNameBlog.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     @Override

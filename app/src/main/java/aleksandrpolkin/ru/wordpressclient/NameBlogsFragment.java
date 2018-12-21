@@ -11,8 +11,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -34,9 +32,9 @@ public class NameBlogsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.screen_name_blogs, container, false);
+        View view = inflater.inflate(R.layout.screen_name_blogs, container, false);
         setHasOptionsMenu(true);
-        FloatingActionButton fab = v.findViewById(R.id.fab_add);
+        FloatingActionButton fab = view.findViewById(R.id.fab_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,11 +48,11 @@ public class NameBlogsFragment extends Fragment {
                 getResources().getDrawable(R.drawable.material_image_3), getResources().getDrawable(R.drawable.ic_avatar_astronaut));
         createNameBlogs("Иван Иванов", "Вчера, 13:45", "Заголовок Поста",
                 getResources().getDrawable(R.drawable.material_image_3), getResources().getDrawable(R.drawable.ic_avatar_astronaut));
-        RecyclerView recyclerViewNameBlog = v.findViewById(R.id.recycler_view_name_blogs);
+        RecyclerView recyclerViewNameBlog = view.findViewById(R.id.recycler_view_name_blogs);
         recyclerViewNameBlog.setLayoutManager(new LinearLayoutManager(getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterNameBlogs(nameBlogsList, PostFragment.FRAGMENT_POST);
         recyclerViewNameBlog.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     @Override

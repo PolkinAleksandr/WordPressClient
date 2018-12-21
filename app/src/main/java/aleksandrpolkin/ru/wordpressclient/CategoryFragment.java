@@ -30,15 +30,15 @@ public class CategoryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.screen_fragment_category, container, false);
+        View view = inflater.inflate(R.layout.screen_fragment_category, container, false);
         categoryList = new ArrayList<>();
         createCategory("Категория1", "Описание категории 1");
         createCategory("Категория2", "Описание категории 2");
-        RecyclerView recyclerViewCategory = v.findViewById(R.id.recycler_view_category);
-        recyclerViewCategory.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        RecyclerView recyclerViewCategory = view.findViewById(R.id.recycler_view_category);
+        recyclerViewCategory.setLayoutManager(new LinearLayoutManager(view.getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterCategory(categoryList);
         recyclerViewCategory.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     public void createCategory(String name, String description) {

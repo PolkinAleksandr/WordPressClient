@@ -35,15 +35,15 @@ public class TagsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.screen_fragment_tags, container, false);
+        View view = inflater.inflate(R.layout.screen_fragment_tags, container, false);
         tagsList = new ArrayList<>();
         createTags("Метка1", getResources().getDrawable(R.drawable.ic_oval_3));
         createTags("Метка2", getResources().getDrawable(R.drawable.ic_oval_3_1));
-        RecyclerView recyclerViewTags = v.findViewById(R.id.recycler_fragment_tags);
-        recyclerViewTags.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        RecyclerView recyclerViewTags = view.findViewById(R.id.recycler_fragment_tags);
+        recyclerViewTags.setLayoutManager(new LinearLayoutManager(view.getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterTags(tagsList);
         recyclerViewTags.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     public void createTags(String someId, Drawable drawable) {
