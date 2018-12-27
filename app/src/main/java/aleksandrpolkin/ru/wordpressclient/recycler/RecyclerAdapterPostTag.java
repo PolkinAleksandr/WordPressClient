@@ -1,4 +1,4 @@
-package aleksandrpolkin.ru.wordpressclient.Recycler;
+package aleksandrpolkin.ru.wordpressclient.recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.PostTag;
+import aleksandrpolkin.ru.wordpressclient.data.PostTag;
 import aleksandrpolkin.ru.wordpressclient.R;
 
-public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapterPostTag.ViewHolder> {
+public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapterPostTag.PostTagViewHolder> {
 
     private List<PostTag> postTagList;
 
@@ -23,14 +23,14 @@ public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapter
 
     @NonNull
     @Override
-    public RecyclerAdapterPostTag.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PostTagViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycle_post_tag, parent, false);
-        return new ViewHolder(v);
+        return new PostTagViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterPostTag.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PostTagViewHolder holder, int position) {
         holder.setDataset(postTagList.get(position));
     }
 
@@ -39,12 +39,12 @@ public class RecyclerAdapterPostTag extends RecyclerView.Adapter<RecyclerAdapter
         return postTagList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    static class PostTagViewHolder extends RecyclerView.ViewHolder {
 
         private TextView text;
         private CardView card;
 
-        ViewHolder(View itemView) {
+        PostTagViewHolder(View itemView) {
             super(itemView);
             text = itemView.findViewById(R.id.text_post_tag);
             card = itemView.findViewById(R.id.card_tag);

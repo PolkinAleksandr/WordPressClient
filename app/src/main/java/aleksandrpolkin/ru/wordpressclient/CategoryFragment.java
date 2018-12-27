@@ -14,13 +14,13 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import aleksandrpolkin.ru.wordpressclient.Class.Category;
-import aleksandrpolkin.ru.wordpressclient.Recycler.RecyclerAdapterCategory;
+import aleksandrpolkin.ru.wordpressclient.data.Category;
+import aleksandrpolkin.ru.wordpressclient.recycler.RecyclerAdapterCategory;
 
 public class CategoryFragment extends Fragment {
 
 
-    static final String FRAGMENT_TAG = "screen_fragment_category";
+    static final String FRAGMENT_CATEGORY = "screen_fragment_category";
     private List<Category> categoryList;
 
     public static CategoryFragment createInstance() {
@@ -30,15 +30,15 @@ public class CategoryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.screen_fragment_category, container, false);
+        View view = inflater.inflate(R.layout.screen_fragment_category, container, false);
         categoryList = new ArrayList<>();
         createCategory("Категория1", "Описание категории 1");
         createCategory("Категория2", "Описание категории 2");
-        RecyclerView recyclerViewCategory = v.findViewById(R.id.recycler_view_category);
-        recyclerViewCategory.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        RecyclerView recyclerViewCategory = view.findViewById(R.id.recycler_view_category);
+        recyclerViewCategory.setLayoutManager(new LinearLayoutManager(view.getContext()));
         RecyclerView.Adapter adapterRecycler = new RecyclerAdapterCategory(categoryList);
         recyclerViewCategory.setAdapter(adapterRecycler);
-        return v;
+        return view;
     }
 
     public void createCategory(String name, String description) {
